@@ -1,0 +1,193 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto' sans-serif;
+}
+html,body{
+    min-height: 100%;
+}
+body{
+    background:  linear-gradient(#cddc39,#009688);
+}
+.members-list{
+    width: 80%;
+    margin: 4% auto;
+    display: flex;
+    flex-wrap: wrap;
+    background: #ffe501;
+}
+.member{
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.member-img{
+    width: 50%;
+    height: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+.member-img img{
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+}
+.member-img:hover img{
+    transform: scale(1.1);
+}
+.member-info{
+    width: 50%;
+    text-align: center;
+}
+.member-info p{
+    margin: 20px 0;
+}
+.social-links .fab{
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid #000;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: transform .5s;
+}
+.social-links .fab:hover{
+    background: #000;
+    color: #ffe501;
+    transform: translateY(-7px);
+}
+.member-img::after{
+    content: '';
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 15px solid #ffe501;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+@media (min-width: 881px){
+    .member:nth-child(4n+3) .member-info,
+    .member:nth-child(4n+4) .member-info{
+        order: 1;
+    }
+
+    .member:nth-child(4n+3) .member-img,
+    .member:nth-child(4n+4) .member-img{
+        order: 2;
+    }
+
+    .member:nth-child(4n+3) .member-img::after,
+    .member:nth-child(4n+4) .member-img::after{
+        left: 0;
+        right: auto;
+        transform: translateY(-50%) rotateZ(180deg);
+    }
+}
+/**** mobile ****/
+@media(max-width: 770px){
+    .members-list{
+        width: 95%;
+    }
+    .member{
+        flex-basis: 100%;
+        font-size: 14px;
+    }
+    .social-links .fab{
+        width: 30px;
+        height: 30px;
+        list-style: 30px;
+    }
+
+    .member:nth-child(even) .member-info{
+        order: 1;
+    }
+
+    .member:nth-child(even) .member-img{
+        order: 2;
+    }
+    
+    .member:nth-child(even) .member-img::after{
+        left: 0;
+        right: auto;
+        transform: translateY(-50%) rotateZ(180deg);
+    }
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
